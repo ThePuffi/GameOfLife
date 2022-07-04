@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>The Game of Life</title>
+
+</head>
+
+<body onload="createArray()" style="text-align: center;">
+
+    <h1>Game of Life</h1>
+
+    <div class="changefieldSize">
+        <label for="fieldSizeSelector">Change Field Size:</label>
+
+        <select name="fieldSize" id="fieldSizeSelector" onchange="changeFieldSize()">
+            <option value="600">600x600</option>
+            <option value="800">800x800</option>
+            <option value="1000">1000x1000</option>
+        </select>
+    </div>
+
+    <div>
+        <canvas width="600" height="600" id="canvas" style="Border: 1px solid black;" onclick="drawPixel(event)"></canvas>
+    </div>
+
+    <div class="buttonsDiv">
+        <input type="button" id="startbutton" value="Start" onclick="start()"></input>
+        <input type="button" id="randombutton" value="Random" onclick="random()"></input>
+        <input type="button" id="clearbutton" value="Clear" onclick="clearCanvas(), clearArray()"></input>
+        <input type="button" id="stopbutton" value="Stop" onclick="stop()"></input>
+    </div>
+
+</body>
+<script type="text/javascript" src="GOL.js"></script>
+
+</html>
